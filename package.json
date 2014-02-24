@@ -1,0 +1,44 @@
+{
+  "name": "grunt-svg2png-clone",
+  "description": "A clone of grunt-svg2png to address a width issue",
+  "version": "0.1.0",
+  "homepage": "https://github.com/bjork24/grunt-svg2png-clone",
+  "author": {
+    "name": "Dan Chilton",
+    "email": "dan.chilton@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bjork24/grunt-svg2png-clone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bjork24/grunt-svg2png-clone/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/bjork24/grunt-svg2png-clone/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "phantomjs": "~1.9.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
