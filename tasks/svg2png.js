@@ -71,20 +71,25 @@ module.exports = function(grunt)
             if (!total) {
                 return;
             }
+            
+            var hasTerminal = !!process.stdout.clearLine;
 
-            process.stdout.clearLine();
-            process.stdout.cursorTo(0);
-
-            var str = style('0%', 'yellow') + ' [ ',
+            if (hasTerminal) {
+                process.stdout.clearLine();
+                process.stdout.cursorTo(0);
+            }
+            
+            var str = '',
                 arr = [],
                 count = total,
                 percent = ((100 / total) * completed).toFixed(2);
 
-            while(count--) {
-                arr.push(count < completed ? '=' : ' ');
+            str += style('.', 'green');
+
+            if (completed == count) {
+                str += style('\n>> ', 'green') + ((new Date() - start) / 1000).toFixed(1) + 's';
             }
-            str += arr.reverse().join('');
-            str += ' ] ' + style(percent + "%", 'green') + ' (' + ((new Date() - start) / 1000).toFixed(1) + 's) ';
+
             process.stdout.write(str);
         };
 
